@@ -1,0 +1,29 @@
+﻿<h2>Login</h2>
+
+<div class="row">
+    <div Class="col-5">
+
+        @if (ViewData["MESSAGE"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewData["MESSAGE"]
+            </div>
+        }
+
+        <form method="post" action="~/login">
+            <div class="mb-3">
+                <label for="employeeId" class="form-label">Employee ID</label>
+                <input type="text" class="form-control" id="employeeId" name="employeeId" placeholder="Employee ID">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary mb-3">Login</button>
+            </div>
+        </form>
+
+    </div>
+</div>
